@@ -1,0 +1,95 @@
+aid: phind
+url: https://raw.githubusercontent.com/api-evangelist/phind/refs/heads/main/apis.yml
+name: Phind
+kind: company
+description: >-
+  Phind was an AI answer engine and coding assistant built for developers,
+  offering conversational, multi-step technical search on the web and through a
+  VS Code extension. Founded in 2022 by Michael Royzen and Justin Wei (Y
+  Combinator S22), Phind trained its own code models and briefly held the
+  top-ranked open-source coding model on Hugging Face. The phind.com product was
+  a consumer/subscription service and never shipped an official public or
+  partner developer API - the only genuinely public developer artifacts were its
+  open-weight models on Hugging Face (Phind-CodeLlama-34B v1/v2, Python-v1, and
+  later Phind-70B). Community "Phind API" projects on GitHub and RapidAPI are
+  unofficial reverse-engineered wrappers, not an official interface. Phind shut
+  down on January 16, 2026; Pro subscribers received prorated refunds and could
+  export chat history through January 30, 2026 before servers were wiped. This
+  entry is a historical record; API surfaces are modeled, not officially
+  documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- AI Coding Assistant
+- AI Search
+- Developer Tools
+- LLM
+- Answer Engine
+- Open Weights
+- Discontinued
+created: '2026-07-11'
+modified: '2026-07-11'
+specificationVersion: '0.19'
+apis:
+- aid: phind:phind-ai-answer-engine
+  name: Phind AI Answer Engine
+  tags:
+  - AI Coding Assistant
+  - AI Search
+  - Answer Engine
+  - LLM
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.phind.com
+  endpointsModeled: true
+  properties:
+  - url: https://www.phind.com
+    type: Website
+  description: >-
+    Conceptual (modeled) surface for Phind's AI answer engine - the
+    developer-focused conversational search that powered phind.com and the VS
+    Code extension. Phind never published an official public or partner
+    developer API for this service; it was consumed only through the Phind web
+    UI and editor extension. No official base URL, authentication, OpenAPI, or
+    endpoint reference was ever documented. Any third-party "Phind API" on
+    GitHub or RapidAPI is an unofficial reverse-engineered wrapper of the
+    website's internal endpoints and is not represented here as official. This
+    API is listed for discovery only and is marked endpointsModeled.
+- aid: phind:phind-open-weight-models
+  name: Phind Open-Weight Models
+  tags:
+  - Open Weights
+  - Models
+  - Code Models
+  - LLM
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://huggingface.co/Phind
+  endpointsModeled: true
+  properties:
+  - url: https://huggingface.co/Phind
+    type: Documentation
+  - url: https://huggingface.co/Phind/Phind-CodeLlama-34B-v2
+    type: SourceCode
+  description: >-
+    Phind's genuinely public developer artifacts - open-weight models published
+    to the Phind organization on Hugging Face. These include the code models
+    Phind-CodeLlama-34B-v1, Phind-CodeLlama-34B-v2, and
+    Phind-CodeLlama-34B-Python-v1 (fine-tunes of Meta's Code Llama 34B,
+    released August 2023 and briefly the top-ranked open-source coding models on
+    HumanEval), plus the later Phind-70B, Phind-SVG, and Magic-Edit. These are
+    downloadable model weights hosted on Hugging Face, not a hosted HTTP
+    inference API operated by Phind; they can be self-hosted or run through
+    third-party inference stacks. Listed as endpointsModeled because Phind
+    exposed no official hosted inference endpoint for them.
+common:
+- type: Plans
+  url: plans/phind-plans-pricing.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/phind
+- type: Website
+  url: https://www.phind.com
+- type: HuggingFace
+  url: https://huggingface.co/Phind
+- type: CrunchBase
+  url: https://www.crunchbase.com/organization/phind
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

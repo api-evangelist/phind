@@ -1,0 +1,84 @@
+aid: phind
+name: Phind
+review:
+  question: Does Phind expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-11'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Phind never published an official public
+    developer API of any kind - REST, SSE, or WebSocket. The phind.com web app
+    streamed answers to its own front end over internal, undocumented endpoints,
+    but no protocol surface (WebSocket or otherwise) was ever documented for
+    third-party consumption, so there is nothing official to model. Phind's
+    product also shut down on 2026-01-16, so no live surface remains to inspect.
+findings:
+  summary: |
+    Phind does not (and did not) publish a documented public WebSocket API, nor
+    any other official public/partner developer API. Phind was an AI answer
+    engine and coding assistant for developers, delivered as a subscription
+    consumer product through the phind.com web app and a VS Code extension. It
+    was never a developer API platform: there is no official base URL, no
+    authentication scheme, no OpenAPI or API reference, and no documented
+    realtime (ws:// or wss://) or SSE endpoint intended for external callers.
+    The only genuinely public developer artifacts are Phind's open-weight models
+    published to the Phind organization on Hugging Face. Community "Phind API"
+    projects on GitHub and RapidAPI are unofficial reverse-engineered wrappers
+    of the website's internal endpoints and are not treated as official here.
+    Phind ceased operations on 2026-01-16.
+  officialPublicApi: false
+  status: discontinued
+  discontinuedDate: '2026-01-16'
+  openWeights: |
+    Phind published open-weight models to https://huggingface.co/Phind. These
+    include Phind-CodeLlama-34B-v1, Phind-CodeLlama-34B-v2, and
+    Phind-CodeLlama-34B-Python-v1 (fine-tunes of Meta Code Llama 34B, released
+    August 2023; v1 reported 67.6 percent pass@1 on HumanEval), plus the later
+    Phind-70B, Phind-SVG, Magic-Edit, and a llama-3.1-instruct-tokenizer. These
+    are downloadable model weights, not a hosted inference API operated by Phind.
+  unofficialWrappers: |
+    Several third-party "Phind API" projects exist (GitHub Selenium/scraping
+    wrappers, a RapidAPI PhindSearch listing, sandbox reimplementations). All are
+    unofficial, reverse-engineer the website's internal request format, and are
+    not endorsed or documented by Phind. They are not represented as an official
+    API in this entry.
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: No official public REST API was ever documented for the phind.com service.
+  - protocol: SSE
+    scheme: https
+    documented: false
+    note: The phind.com web app streamed answers to its own UI, but no public SSE endpoint was documented for third-party use.
+  - protocol: WebSocket
+    scheme: wss
+    documented: false
+    note: No WebSocket endpoint was ever documented in any official Phind developer material.
+  endpointsModeled: true
+  endpointsConfirmedRest: []
+sources:
+- url: https://www.phind.com
+  type: Website
+  note: Consumer AI answer engine for developers; subscription product, no developer API documentation.
+- url: https://huggingface.co/Phind
+  type: SourceCode
+  note: Phind organization on Hugging Face - the open-weight models (Phind-CodeLlama, Phind-70B, etc.). The only genuinely public developer artifacts.
+- url: https://www.ycombinator.com/companies/phind
+  type: CompanyProfile
+  note: Y Combinator S22 profile; describes Phind as an AI search engine for developers.
+- url: https://news.ycombinator.com/item?id=46594533
+  type: Announcement
+  note: Community thread documenting Phind's shutdown on 2026-01-16, prorated refunds, and chat-export window through 2026-01-30.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket surface exists, and Phind never shipped any official public
+    developer API. The apis.yml entry models two discovery surfaces - the AI
+    answer engine and the Hugging Face open-weight models - both flagged
+    endpointsModeled, with descriptions stating plainly that no official public
+    API was ever documented and that the product shut down on 2026-01-16. No
+    openapi/, rate-limits/, finops/, or collections/ artifacts were fabricated;
+    only a plans/ file recording historical subscription pricing was included.

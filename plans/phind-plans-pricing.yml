@@ -1,0 +1,139 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Phind
+providerId: phind
+created: '2026-07-11'
+modified: '2026-07-11'
+reconciled: false
+tags:
+- AI Coding Assistant
+- AI Search
+- Developer Tools
+- Plans
+- Discontinued
+description: >-
+  Phind was a subscription consumer product, not a metered developer API. It
+  had no per-token or per-call API pricing because it never shipped an official
+  public API - billing was per-seat access to the phind.com web app and VS Code
+  extension. The tiers below are the historical, pre-shutdown consumer
+  subscription plans as reported by public pricing summaries; they are recorded
+  for historical reference only. Phind shut down on January 16, 2026, so none of
+  these plans are purchasable. Numbers should be treated as approximate and were
+  not reconciled against a live pricing page (phind.com is no longer serving the
+  product).
+notes: >-
+  Phind ceased operations on 2026-01-16. Pro subscribers were issued prorated
+  refunds and given until 2026-01-30 to export chat history before servers were
+  wiped. There is no successor API. The open-weight Phind-CodeLlama and Phind-70B
+  models remain available on Hugging Face and are governed by their own model
+  licenses, not by these subscription plans.
+sources:
+- https://www.phind.com/plans
+- https://news.ycombinator.com/item?id=46594533
+- https://huggingface.co/Phind
+plans:
+- id: phind-free
+  name: Free
+  type: free
+  description: >-
+    Entry tier with a limited daily allowance of answers and access to Phind's
+    default models. Historical; no longer available.
+  entries:
+  - label: Daily Uses
+    name: free_daily_uses
+    type: usage
+    metric: requests
+    limit: -1
+    timeFrame: day
+    geo: global
+    unit: 1
+    price: free (limited daily uses; historical)
+    userMultiplied: false
+  elements:
+  - name: Default Models
+  - name: Web Access
+- id: phind-plus
+  name: Plus
+  type: paid
+  description: >-
+    Paid tier that unlocked frontier models and removed some daily limits.
+    Reported at approximately 17 USD per month. Historical.
+  entries:
+  - label: Monthly Subscription
+    name: plus_monthly
+    type: flat
+    metric: seat
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: approx 17 USD per user per month (historical)
+    userMultiplied: true
+  elements:
+  - name: Frontier Models
+  - name: Higher Daily Limits
+- id: phind-pro
+  name: Pro
+  type: paid
+  description: >-
+    Core paid developer tier. Reported at approximately 20 USD per month
+    (about 17 USD per month billed annually). Historical.
+  entries:
+  - label: Monthly Subscription
+    name: pro_monthly
+    type: flat
+    metric: seat
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: approx 20 USD per user per month; approx 17 USD per month annual (historical)
+    userMultiplied: true
+  elements:
+  - name: Expanded Model Access
+  - name: Higher Usage Limits
+- id: phind-pro-max
+  name: Pro Max
+  type: paid
+  description: >-
+    High-volume tier aimed at heavy daily users. Reported at approximately
+    70 USD per month. Historical.
+  entries:
+  - label: Monthly Subscription
+    name: pro_max_monthly
+    type: flat
+    metric: seat
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: approx 70 USD per user per month (historical)
+    userMultiplied: true
+  elements:
+  - name: Highest Usage Limits
+  - name: Priority Access
+- id: phind-enterprise
+  name: Enterprise
+  type: enterprise
+  description: >-
+    Team/enterprise seats with a reported 99.9 percent uptime SLA and status
+    reporting. Reported at approximately 40 USD per user per month. Historical.
+  entries:
+  - label: Per-Seat Subscription
+    name: enterprise_seat
+    type: flat
+    metric: seat
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: approx 40 USD per user per month (historical)
+    userMultiplied: true
+  elements:
+  - name: Team Management
+  - name: Uptime SLA
+  - name: Priority Support
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
