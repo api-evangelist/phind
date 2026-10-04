@@ -49,11 +49,14 @@ tags:
 - Answer Engine
 - Open Weights
 - Discontinued
+- Defunct
+- Foundation Models
 created: '2026-07-11'
 modified: '2026-07-11'
 specificationVersion: '0.23'
 apis:
 - aid: phind:phind-ai-answer-engine
+  x-published: false
   name: Phind AI Answer Engine
   tags:
   - AI Coding Assistant
@@ -116,3 +119,4 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-status: defunct
