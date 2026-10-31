@@ -1,4 +1,4 @@
-# Phind (phind)
+# Phind
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,89 +64,49 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Phind was an AI answer engine and coding assistant built for developers, offering conversational, multi-step technical search on the web and through a VS Code extension. Founded in 2022 by Michael Royzen and Justin Wei (Y Combinator S22, San Francisco), Phind trained its own code models and briefly held the top-ranked open-source coding model on Hugging Face.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-**Access model — read this first:** Phind was a subscription **consumer product**, not a developer API platform. The phind.com service **never shipped an official public or partner developer API** — no documented base URL, authentication, OpenAPI, REST reference, SSE, or WebSocket surface. The only genuinely public developer artifacts are Phind's **open-weight models on Hugging Face** ([huggingface.co/Phind](https://huggingface.co/Phind)). Community "Phind API" projects on GitHub and RapidAPI are **unofficial reverse-engineered wrappers** of the website's internal endpoints and are not represented here as official.
+Phind was an AI answer engine and coding assistant built for developers, offering conversational, multi-step technical search on the web and through a VS Code extension. Founded in 2022 by Michael Royzen and Justin Wei (Y Combinator S22), Phind trained its own code models and briefly held the top-ranked open-source coding model on Hugging Face. The phind.com product was a consumer/subscription service and never shipped an official public or partner developer API - the only genuinely public developer artifacts were its open-weight models on Hugging Face (Phind-CodeLlama-34B v1/v2, Python-v1, and later Phind-70B). Community "Phind API" projects on GitHub and RapidAPI are unofficial reverse-engineered wrappers, not an official interface. Phind shut down on January 16, 2026; Pro subscribers received prorated refunds and could export chat history through January 30, 2026 before servers were wiped. This entry is a historical record; API surfaces are modeled, not officially documented.
 
-**Status: discontinued.** Phind shut down on **January 16, 2026**. Pro subscribers received prorated refunds and could export chat history through January 30, 2026 before servers were wiped. This entry is a **historical record**; the API surfaces below are modeled (`endpointsModeled: true`), not officially documented.
+**Areas:** AI Coding Assistant · AI Search · Developer Tools · LLM · Answer Engine · Open Weights · Discontinued · Defunct · Foundation Models
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/phind/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/phind/refs/heads/main/apis.yml)
+## Phind on APIs.io (historical record)
 
-## Tags
+Everything profiled for Phind is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/phind/](https://apis.io/providers/phind/)** — or go straight to one of the APIs or properties below.
 
-- AI Coding Assistant
-- AI Search
-- Developer Tools
-- LLM
-- Answer Engine
-- Open Weights
-- Discontinued
+### APIs (2)
 
-## Timestamps
+- [Phind AI Answer Engine](https://apis.io/apis/phind/phind-ai-answer-engine/) — Conceptual (modeled) surface for Phind's AI answer engine - the developer-focused conversational search that powered phind.com and the VS Code extension.…
+- [Phind Open-Weight Models](https://apis.io/apis/phind/phind-open-weight-models/) — Phind's genuinely public developer artifacts - open-weight models published to the Phind organization on Hugging Face. These include the code models…
 
-- **Created:** 2026-07-11
-- **Modified:** 2026-07-11
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-> Both entries are marked `endpointsModeled` — they are listed for discovery only. Phind published no official API reference for either.
+#### Plans and pricing (1)
 
-### Phind AI Answer Engine
+Published plans, tiers and prices.
 
-Conceptual (modeled) surface for Phind's AI answer engine — the developer-focused conversational search that powered phind.com and the VS Code extension. Phind never published an official public or partner developer API for this service; it was consumed only through the Phind web UI and editor extension. No official base URL, authentication, OpenAPI, or endpoint reference was ever documented. Any third-party "Phind API" on GitHub or RapidAPI is an unofficial reverse-engineered wrapper and is not represented here as official.
+- [Phind Plans Pricing](https://apis.io/plans/phind/phind-plans-pricing/)
 
-- **Human URL:** [https://www.phind.com](https://www.phind.com)
+## Where to find this API
 
-#### Tags
-
-- AI Coding Assistant
-- AI Search
-- Answer Engine
-- LLM
-
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.phind.com)
 
-### Phind Open-Weight Models
+## API Evangelist rating
 
-Phind's genuinely public developer artifacts — open-weight models published to the Phind organization on Hugging Face. These include the code models Phind-CodeLlama-34B-v1, Phind-CodeLlama-34B-v2, and Phind-CodeLlama-34B-Python-v1 (fine-tunes of Meta's Code Llama 34B, released August 2023 and briefly the top-ranked open-source coding models on HumanEval), plus the later Phind-70B, Phind-SVG, and Magic-Edit. These are downloadable model weights hosted on Hugging Face, **not** a hosted HTTP inference API operated by Phind; they can be self-hosted or run through third-party inference stacks.
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
 
-- **Human URL:** [https://huggingface.co/Phind](https://huggingface.co/Phind)
+## How this profile is made
 
-#### Tags
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- Open Weights
-- Models
-- Code Models
-- LLM
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Phind: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-#### Properties
+## Open an issue
 
-- [Documentation](https://huggingface.co/Phind)
-- [Source Code](https://huggingface.co/Phind/Phind-CodeLlama-34B-v2)
-
-## Common Properties
-
-- [Plans](plans/phind-plans-pricing.yml)
-- [LinkedIn](https://www.linkedin.com/company/phind)
-- [Website](https://www.phind.com)
-- [Hugging Face](https://huggingface.co/Phind)
-- [CrunchBase](https://www.crunchbase.com/organization/phind)
-
-## Plans
-
-Phind was billed per-seat (subscription), not per-token/per-call — it had no API pricing because it had no public API. Historical, pre-shutdown consumer tiers (approximate, no longer purchasable):
-
-- **Free** — limited daily uses, default models.
-- **Plus** — ~$17/mo; frontier models, higher daily limits.
-- **Pro** — ~$20/mo (~$17/mo billed annually); core developer tier.
-- **Pro Max** — ~$70/mo; heavy daily users.
-- **Enterprise** — ~$40/user/mo; team management, 99.9% uptime SLA, priority support.
-
-See [plans/phind-plans-pricing.yml](plans/phind-plans-pricing.yml). The open-weight models on Hugging Face remain available under their own model licenses, independent of these plans.
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/phind/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
